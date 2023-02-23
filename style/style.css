@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.first,
+.second {
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.first {
+  background-color: orange;
+  top: 0;
+  z-index: -1;
+}
+
+.second {
+  background-color: rgb(0, 183, 255);
+  bottom: 0;
+  z-index: -1;
+}
+
+.github {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.462745098);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.github .form {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.github .form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 30px;
+  font-size: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.github .form button {
+  align-self: flex-end;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 60px;
+  transition: 0.3s;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.github .form button:hover {
+  color: #fff;
+  background-color: rgba(120, 118, 118, 0.631372549);
+}
+.github .user {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.github .user.hide {
+  display: none;
+}
+.github .user img {
+  width: 30%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  padding: 5px;
+}
+.github .user .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.github .user .details a {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.github .user .details a:hover i {
+  position: relative;
+  transition: 0.5s;
+  transform: translateX(5px);
+}
+.github .user .details__users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.github .user .details__users .followers, .github .user .details__users .following {
+  font-weight: 800;
+}/*# sourceMappingURL=style.css.map */
