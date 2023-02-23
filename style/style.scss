@@ -129,3 +129,15 @@ body {
 
   }
 }
+
+
+.message{
+  text-align: center;
+  font-size: 2rem;
+  color: red;
+  text-transform: uppercase;
+
+  &.hide{
+    display: none;
+  }
+}

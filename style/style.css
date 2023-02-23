@@ -122,4 +122,14 @@ body {
 }
 .github .user .details__users .followers, .github .user .details__users .following {
   font-weight: 800;
+}
+
+.message {
+  text-align: center;
+  font-size: 2rem;
+  color: red;
+  text-transform: uppercase;
+}
+.message.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -19,14 +19,24 @@ submitBtn.addEventListener("click", (e) => {
 function findUser(userName) {
   fetch(url + `/${userName}`)
     .then((data) => data.json())
-    .then((res) => changeItems(res));
+    .then((res) => changeItems(res))
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }
 
 function changeItems(data) {
-  user.classList.remove('hide')
-  img.src = data.avatar_url;
-  followers.innerText = data.followers;
-  following.innerText = data.following;
-  goProfile.setAttribute("href", data.html_url);
-  user.classList.remove("hide");
+  if (data.message == "Not Found") {
+    user.classList.add('hide')
+    document.querySelector('.message').classList.remove('hide');
+    document.querySelector('.message') = "User not found";
+  } else {
+    document.querySelector('.message').classList.add('hide');
+    user.classList.remove("hide");
+    img.src = data.avatar_url;
+    followers.innerText = data.followers;
+    following.innerText = data.following;
+    goProfile.setAttribute("href", data.html_url);
+    user.classList.remove("hide");
+  }
 }
